@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #003f5c;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #0077b6;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background-color: #90e0ef;
+            color: black;
+            border-radius: 5px;
+        }
+
+        /* Header with Background */
+        .header {
+            background: url('pexels-dariaobymaha-1683975.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: row; /* Align items in a row */
+            align-items: flex-start; /* Align items to the top */
+            width: 80%; /* Set a max width for the container */
+            max-width: 1200px; /* Limit the maximum width */
+            margin: 20px auto; /* Center the container */
+            margin-top: 20px; /* Space below header */
+        }
+        .image-placeholder {
+            flex: 1; /* Take up equal space */
+            height: 300px; /* Set a height for the image */
+            border-radius: 10px;
+            margin-right: 20px; /* Space between image and text */
+            overflow: hidden; /* Hide overflow */
+        }
+        .image-placeholder img {
+            width: 100%; /* Make image responsive */
+            height: 100%; /* Make image fill the container */
+            object-fit: cover; /* Cover the area without distortion */
+        }
+        .about-us-content {
+            flex: 2; /* Take up more space */
+            padding: 20px;
+            background-color: #ffffff; /* White background for about us */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-us-content h2 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #0077b6; /* Header color */
+        }
+        .about-us-content p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .feedback {
+            margin-top: 20px; /* Space above feedback section */
+        }
+        .feedback input, .feedback textarea {
+            width: 100%; /* Full width */
+            padding: 10px;
+            margin-bottom: 10px; /* Space below inputs */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .feedback button {
+            background-color: #0077b6; /* Button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .feedback button:hover {
+            background-color: #005f8d; /* Darker shade on hover */
+        }
+        .reviews {
+            margin-top: 20px; /* Space above reviews section */
+            background-color: #f0f0f0; /* Light background for reviews */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #003f5c; /* Footer color */
+            color: white;
+            text-align: center;
+            padding: 20px 0; /* Increased padding for a larger footer */
+            font-size: 1.2em; /* Increased font size */
+            position: relative; /* Relative position for footer */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <h1>About Us</h1>
+    </div>
+
+    <div class="container">
+        <div class="image-placeholder">
+            <img src="happy-people.jpg" alt="Happy People"> 
+        </div>
+        <div class="about-us-content">
+            <h2>Our Mission</h2>
+            <p>Kalosia is a vibrant community dedicated to promoting mental health awareness and well-being. Our mission is to create a safe and supportive environment where individuals can connect, share experiences, and access valuable resources.</p>
+            <p>We believe that mental health is just as important as physical health, and we strive to break the stigma surrounding mental health issues. Our community is open to everyone, regardless of their background or experiences.</p>
+            <p>Through discussions, events, and shared resources, we aim to empower individuals to take charge of their mental health and support one another in their journeys. Join us in fostering a culture of understanding, compassion, and growth.</p>
+            <p>Whether you're looking for support, information, or simply a place to connect with like-minded individuals, Kalosia is here for you. Together, we can make a difference!</p>
+
+            <div class="feedback">
+                <h2>Review or Feedback</h2>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="feedbackText" placeholder="Your Feedback" rows="4" required></textarea>
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+            </div>
+
+            <div class="reviews" id="reviews">
+                <h2>Feedbacks</h2>
+                <ul id="feedbackList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>All Copyrights reserved to Kalosia</p>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            const name = document.getElementById('name').value;
+            const feedbackText = document.getElementById('feedbackText').value;
+
+            if (name && feedbackText) {
+                const feedbackList = document.getElementById('feedbackList');
+                const listItem = document.createElement('li');
+                listItem.textContent = `${name}: ${feedbackText}`;
+                feedbackList.appendChild(listItem);
+
+                // Clear the input fields
+                document.getElementById('name').value = '';
+                document.getElementById('feedbackText').value = '';
+            } else {
+                alert('Please fill in both fields.');
+            }
+        }
+    </script>
+
+</body>
+</html>

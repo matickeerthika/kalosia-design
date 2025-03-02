@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety & Stress - Kalosia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #003f5c;
+            text-align: center;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #0077b6;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background-color: #90e0ef;
+            color: black;
+            border-radius: 5px;
+        }
+        .header {
+            background: url('header_bg.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5em;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .content h2 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #0077b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #90e0ef;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Understanding Anxiety & Stress</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>What is Anxiety?</h2>
+        <img src="anxiety_explained.png" alt="Anxiety explained">
+        <p>Anxiety is the body's way of responding to perceived threats or stressful situations...</p>
+        
+        <h2>Common Symptoms of Anxiety</h2>
+        <img src="anxiety_symptoms.jpg" alt="Anxiety symptoms">
+        <ul>
+            <li>Restlessness or feeling on edge</li>
+            <li>Increased heart rate</li>
+            <li>Difficulty concentrating</li>
+        </ul>
+
+        <h2>Causes of Anxiety and Stress</h2>
+        <img src="anxiety_causes.jpg" alt="Causes of anxiety">
+        <ul>
+            <li>Academic Pressure</li>
+            <li>Workload and Responsibilities</li>
+            <li>Relationships</li>
+        </ul>
+
+        <h2>Effective Ways to Cope with Anxiety</h2>
+        <img src="coping_strategies.jpg" alt="Coping strategies">
+        <ol>
+            <li>Practice Deep Breathing</li>
+            <li>Engage in Physical Activity</li>
+            <li>Try Mindfulness and Meditation</li>
+        </ol>
+
+        <h2>When to Seek Professional Help</h2>
+        <img src="professional_help.jpg" alt="Professional help">
+        <p>If anxiety becomes overwhelming, seeking professional help is essential...</p>
+
+        <h2>Final Thoughts</h2>
+        <img src="mental_wellness.jpg" alt="Mental wellness">
+        <p>Recognizing symptoms, identifying triggers, and implementing coping mechanisms can significantly improve mental well-being...</p>
+
+        <a href="resources.html" class="back-btn">Back to Resources</a>
+    </div>
+
+</body>
+</html>
